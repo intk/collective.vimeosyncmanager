@@ -39,11 +39,39 @@ import transaction
 
 
 # VIMEO
+def test_about_me():
+    with plone.api.env.adopt_user(username="admin"):
+        # Get API settings from the controlpanel
+        #api_settings = get_api_settings()
+        
+        api_settings = {
+            "showcase_id": "",
+            "api_access_token": "",
+            "api_client_id":"",
+            "api_client_secret": ""
+        }
+
+        # Create the API connection
+        api_connection = APIConnectionVideos(api_settings)
+
+        logger("[Status] Start test sync about me.")
+
+        test_result = api_connection.test_get_about_me()
+        print(test_result)
+
+        logger("[Status] Finished test sync about me.")
+        return video
+
 def test_get_video_by_id():
     with plone.api.env.adopt_user(username="admin"):
         # Get API settings from the controlpanel
-        api_settings = get_api_settings()
-        
+        #api_settings = get_api_settings()
+            
+        self.showcase_id = api_settings['showcase_id']
+        self.api_access_token = api_settings['api_access_token']
+        self.api_client_id = api_settings['api_client_id']
+        self.api_client_secret = api_settings['api_client_secret']
+
         # Create the API connection
         api_connection = APIConnectionVideos(api_settings)
 

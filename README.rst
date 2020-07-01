@@ -14,10 +14,7 @@ Features
 Architecture
 ============
 - There are two main parts: API connection and the Sync Manager. Both operate independently from each other.
-- API connection - This is the module that connects with the Vimeo API and returns the requested data. No changes are made to the data. The data should not be processed at this point. Implemented methods:
-	- get_showcase_by_id
-	- get_showcase_videos
-	- get_video_by_id
+- API connection - This is the module that connects with the Vimeo API and returns the requested data. No changes are made to the data. The data should not be processed at this point. Implemented methods
 - Sync mechanism - This the connection with Plone. It maps the results from an API into a content type in Plone. Implements all CRUD operations for the Video content type based on the results from the api. For this project the mapping is done between the Vimeo API and a Video content type.
 
 .. _wildcard.media: https://github.com/collective/wildcard.media

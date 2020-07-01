@@ -1,0 +1,70 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.vimeosyncmanager">
+
+    <browser:page
+        name="sync_person"
+        for="*"
+        class=".views.SyncPerson"
+        permission="cmf.ManagePortal"
+    />
+
+    <browser:page
+        name="queue_sync_person"
+        for="*"
+        class=".views.QueueSyncPerson"
+        permission="cmf.ManagePortal"
+    />
+
+    <browser:page
+        name="queue_sync_all_persons"
+        for="*"
+        class=".views.QueueSyncAllPersons"
+        permission="cmf.ManagePortal"
+    />
+
+    <browser:page
+        name="sync_video"
+        for="*"
+        class=".views.SyncVideo"
+        permission="cmf.ManagePortal"
+    />
+
+    <browser:page
+        name="sync_all_videos"
+        for="*"
+        class=".views.SyncAllVideos"
+        permission="cmf.ManagePortal"
+    />
+
+    <browser:page
+        name="sync_all_persons"
+        for="*"
+        class=".views.SyncAllPersons"
+        permission="cmf.ManagePortal"
+    />
+
+    <browser:page
+        name="sync_all_persons_ajax"
+        for="*"
+        class=".views.SyncAllPersonsAJAX"
+        permission="cmf.ManagePortal"
+    />
+
+    <browser:page
+        name="request_sync_all_persons"
+        for="*"
+        class=".views.RequestSyncAllPersons"
+        permission="zope2.View"
+    />
+
+  	<browser:page
+	    name="vimeoapi-controlpanel"
+	    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+	    class="..controlpanel.controlpanel.GsheetsPanelView"
+	    permission="cmf.ManagePortal"
+	/>
+
+</configure>

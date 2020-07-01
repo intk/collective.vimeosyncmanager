@@ -17,7 +17,7 @@ Architecture
 - API connection: This is the module that connects with the Vimeo API and returns the requested data. No changes are made to the data. The data should not be processed at this point. Implemented methods: get_showcase_by_id, get_showcase_videos, get_video_by_id
 - Sync mechanism: This is the connection with Plone. It maps the results from an API into a content type in Plone. Implements all CRUD operations for the Video content type based on the results from the api. For this project the mapping is done between the Vimeo API and a Video content type.
 
-.. _wildcard.media: https://github.com/collective/wildcard.media
+
 
 Installation
 ===================
@@ -45,10 +45,13 @@ Add to your buildout.cfg::
 
 Dependencies
 ===============
-- vimeo
-- wildcard.media
+- `vimeo`_
+- `wildcard.media`_
 
 The following dependencies are not required unless the creation of pictures and translations is requested.
 
 - plone.namedfile
 - plone.app.multilingual 
+
+.. _wildcard.media: https://github.com/collective/wildcard.media
+.. _vimeo: https://github.com/vimeo/vimeo.py
